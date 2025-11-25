@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>💕 Valentine's Card for You 💕</title>
+</head>
+<body>
+    <div class="hearts-bg" id="heartsBackground"></div>
+
+    <div class="login-screen" id="loginScreen">
+        <div class="login-card">
+            <h1>A Special Message Awaits!!</h1>
+            <p>Enter the secret password to unlock your Valentine's surprise...</p>
+            <input type="password" class="password-input" id="passwordInput" placeholder="Enter password" />
+            <br>
+            <button class="enter-btn" onclick="checkPassword()">Enter</button>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #888;">Hint: The password is "love" ❤️</p>
+        </div>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <div class="container">
+            <div class="header">
+                <h1>💝 Happy Valentine's Day! 💝</h1>
+                <p>A special collection of memories and love</p>
+            </div>
+
+            <div class="navigation">
+                <button class="nav-btn active" onclick="showPage('album')">📸 Photo Album</button>
+                <button class="nav-btn" onclick="showPage('letter')">💌 Love Letter</button>
+            </div>
+
+            <div class="page active" id="album">
+                <h2 style="color: #c44569; margin-bottom: 20px; text-align: center;">💕 Our Beautiful Memories 💕</h2>
+                <div class="photo-grid">
+                    <div class="photo-placeholder" onclick="uploadPhoto(this)">
+                        <span>+ Add Photo</span>
+                    </div>
+                    <div class="photo-placeholder" onclick="uploadPhoto(this)">
+                        <span>+ Add Photo</span>
+                    </div>
+                    <div class="photo-placeholder" onclick="uploadPhoto(this)">
+                        <span>+ Add Photo</span>
+                    </div>
+                    <div class="photo-placeholder" onclick="uploadPhoto(this)">
+                        <span>+ Add Photo</span>
+                    </div>
+                    <div class="photo-placeholder" onclick="uploadPhoto(this)">
+                        <span>+ Add Photo</span>
+                    </div>
+                    <div class="photo-placeholder" onclick="uploadPhoto(this)">
+                        <span>+ Add Photo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page" id="letter">
+                <h2 style="color: #c44569; margin-bottom: 30px; text-align: center;">💌 A Letter From My Heart 💌</h2>
+                <div class="love-letter">
+                    <p>My Dearest Valentine,</p>
+                    <br>
+                    <p>Every day with you feels like a beautiful dream that I never want to wake up from. Your smile lights up my world brighter than a thousand stars, and your laugh is the sweetest melody I've ever heard.</p>
+                    <br>
+                    <p>From the moment we met, I knew there was something magical about you. The way you see the world with such wonder and kindness inspires me to be a better person every single day.</p>
+                    <br>
+                    <p>Thank you for being my partner in all of life's adventures, for holding my hand through the storms, and for dancing with me in the sunshine. You are my heart, my home, and my happily ever after.</p>
+                    <br>
+                    <p>This Valentine's Day, I want you to know that my love for you grows stronger with each passing moment. You are not just my Valentine for today, but for every day of forever.</p>
+                    <br>
+                    <p style="text-align: right;">With all my love,<br>💕 Your Forever Valentine 💕</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="file" class="hidden-file-input" id="photoUpload" accept="image/*" onchange="handlePhotoUpload(event)">
+    <input type="file" class="hidden-file-input" id="puzzleImageUpload" accept="image/*" onchange="handlePuzzleImageUpload(event)">
+    <script src="script.js" defer></script>
+</body>
+</html>
